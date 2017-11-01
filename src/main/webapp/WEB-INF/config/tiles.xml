@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<!-- tiles is used only for page design from tamplate Basic tiles definitions 
+	is... as below -->
+
+<!-- <definition name="base.definition" template="/WEB-INF/views/layout/layout.jsp"> 
+	<put-attribute name="title" value="" /> <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" 
+	/> <put-attribute name="menu" value="/WEB-INF/views/layout/menu.jsp" /> <put-attribute 
+	name="body" value="" /> <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" 
+	/> </definition> -->
+
+<tiles-definitions>
+	<!-- header footer body definitions start -->
+	<definition name="base.definition" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<!-- <put-attribute name="footer" value="/WEB-INF/views/footer.jsp" /> -->
+	</definition>
+
+	<definition name="null.definition" template="/WEB-INF/views/layout2.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="user.definition" template="/WEB-INF/views/layout3.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+	</definition>
+
+	<definition name="popup.definition" template="/WEB-INF/views/layout4.jsp">
+		<put-attribute name="title" value="" />
+		<!-- <put-attribute name="body" value="" /> -->
+	</definition>
+
+	<definition name="login.definition" template="/WEB-INF/views/loginLayout.jsp">
+		<put-attribute name="login" value="/WEB-INF/views/loginLayout.jsp" />
+		<!-- <put-attribute name="body" value="" /> -->
+	</definition>
+	<!-- header footer body definitions end -->
+
+	<!-- home start -->
+	<definition name="home" extends="base.definition">
+		<put-attribute name="title" value="Welcome Home" />
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+	</definition>
+	<!-- home end -->
+
+	<!-- login info start -->
+	<definition name="login" extends="login.definition">
+		<put-attribute name="login" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+
+	<definition name="ownerInfo" extends="base.definition">
+		<put-attribute name="title" value="Information" />
+		<put-attribute name="body" value="/WEB-INF/views/pos/ownerInfo.jsp" />
+	</definition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tiles-definitions>
